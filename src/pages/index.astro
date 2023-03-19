@@ -1,4 +1,7 @@
 ---
+import { Drag } from "../components/drag";
+import { Home } from "../components/Home"
+import { Menu } from "../components/Menu";
 ---
 
 <html lang="en">
@@ -7,9 +10,12 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Main</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="container bg-main h-[100vh] w-[100vw]">
+		<Menu client:only="React"/>
+		<div id="root"></div>
+		<!-- <Drag client:only="React"/> -->
+		<!-- <Home client:only="React"/> -->
 	</body>
 </html>
