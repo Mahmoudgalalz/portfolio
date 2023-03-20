@@ -2,6 +2,7 @@
 import { Drag } from "../components/drag";
 import { Home } from "../components/Home"
 import { Menu } from "../components/Menu";
+import { Project } from "../components/Projects";
 ---
 
 <html lang="en">
@@ -12,10 +13,11 @@ import { Menu } from "../components/Menu";
 		<meta name="generator" content={Astro.generator} />
 		<title>Main</title>
 	</head>
-	<body class="container bg-main h-[100vh] w-[100vw]">
-		<Menu client:only="React"/>
-		<div id="root"></div>
+	<body id="main-root" class="container bg-main h-[100vh] w-[100vw]">
+		<!-- <Menu client:only="React"/> -->
+		<!-- <div id="root"></div> -->
 		<!-- <Drag client:only="React"/> -->
-		<!-- <Home client:only="React"/> -->
+		<Home client:only="React"/>
+		<Project client:only="React" />
 	</body>
 </html>
